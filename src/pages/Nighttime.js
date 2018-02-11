@@ -1,17 +1,11 @@
 import React from 'react';
-import Sidenav from './Sidenav';
 import Camping from './../camping.png';
 
 export default class Nighttime extends React.Component {
   render() {
     return (
       <div className="row">
-        <div className="center-align">
-          <header className="App-header ">
-            <img src={Camping} className="App-logo" alt="camping" height="300"/>
-          </header>
-        </div>
-        <main className="container">
+        <main className="col s12">
           <h3> Night Time </h3>
           <p> Na het avondfeest kan wie wil, samen met ons, gezellig zijn tent opslaan op het domein en daar overnachten. Je staat dan wel in voor je eigen kampeermateriaal natuurlijk. Toiletten zijn beschikbaar, een buitendouche ook (zonder warm water weliswaar, dus dat is voor de waaghalzen onder ons). </p>
           <p> Drukken jullie op de knop hiernaast indien jullie dit willen en vullen jullie de gevraagde gegevens in? </p>

@@ -1,11 +1,10 @@
 import React from 'react';
-import Sidenav from './Sidenav';
 
 export default class Gifts extends React.Component {
   render() {
     return (
       <div className="row">
-        <main className="container">
+        <main className="col s12">
           <h3> Gifts </h3>
           <p> Het is cliché… en toch herhalen wij het hier nog eens: cadeaus zijn echt-echt-echt niet nodig! Je doet ons het grootste plezier met jullie aanwezigheid. </p>
           <p> Na 7 jaar samenwonen hebben wij al alles waar wij van kunnen dromen… </p>

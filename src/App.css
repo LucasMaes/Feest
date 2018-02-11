@@ -31,7 +31,7 @@
   src: url('assets/fonts/caviardreams/CaviarDreams.ttf') format('truetype');
 }
 header, main, footer {
-  padding-left: 310px;
+
 }
 
 @media only screen and (max-width : 992px) {

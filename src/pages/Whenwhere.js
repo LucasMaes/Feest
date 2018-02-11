@@ -1,17 +1,11 @@
 import React from 'react';
-import Sidenav from './Sidenav';
 import TombeekPlage from './../tombeekplage.jpg';
 
 export default class Whenwhere extends React.Component {
   render() {
     return (
       <div className="row">
-        <div className="center-align">
-          <header className="App-header ">
-            <img src={TombeekPlage} className="App-logo" alt="tombeekplage" height="300"/>
-          </header>
-        </div>
-        <main className="container">
+        <main className="col s12">
           <h3> Locatie </h3>
           <p> Tombeek Plage - Lanestraat 126, Overijse </p>
           <p> Een oud industrieel gebouw dat uitgeeft op een prachtig groen domein met verschillende riviertjes, kreekjes, … De locatie straalt rust en genieten uit… meteen ook wat jullie te doen staat op deze dag </p>

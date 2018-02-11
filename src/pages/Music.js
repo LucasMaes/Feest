@@ -1,5 +1,4 @@
 import React from 'react';
-import Sidenav from './Sidenav';
 import MusicPhoto from './../music.jpg';
 
 export default class Music extends React.Component {
@@ -25,12 +24,7 @@ export default class Music extends React.Component {
   render() {
     return (
       <div className="row">
-        <div className="center-align">
-          <header className="App-header ">
-            <img src={MusicPhoto} className="App-logo" alt="music" height="300"/>
-          </header>
-        </div>
-        <main className="container">
+        <main className="col s12">
           <h3> Music Maestro </h3>
           <p> Na het dessert schudden we de beentjes los op enkele goede beats!
           {"\n"} Lucas is op z’n best met POMPEN van Kraantej Pappie en is nooit te gegeneerd op Fifth Harmony als verzoeknummertje te vragen. Kristien smelt dan weer voor de Kempense charmes van de Van Echelpoel en gaat helemaal uit de bol op elke R&B schijf! </p>

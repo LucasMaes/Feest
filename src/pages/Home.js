@@ -1,7 +1,6 @@
 import React from 'react';
 import picture from './../IMG_1272.JPG';
 import {Link} from 'react-router-dom';
-import Sidenav from './Sidenav';
 
 export default class Home extends React.Component {
   render() {
@@ -9,8 +8,7 @@ export default class Home extends React.Component {
       <div>
         <div className="row">
           <div className="center-align">
-            <header className="App-header ">
-              <img src={picture} className="App-logo" alt="kristienenlucas" height="300"/>
+            <header className="App-header">
               <h1 className="App-title">Kristien en Lucas</h1>
             </header>
           </div>
@@ -24,10 +22,10 @@ export default class Home extends React.Component {
             </div>
           </main>
           <footer className="page-footer">
-            <div className="section row">
-              <p>Tombeek Plage</p>
-              <p>Lanestraat 126</p>
-              <p>Overijse</p>
+            <div className="section">
+              <h5>Tombeek Plage</h5>
+              <h6>Lanestraat 126</h6>
+              <h6>Overijse</h6>
             </div>
           </footer>
         </div>

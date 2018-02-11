@@ -1,12 +1,11 @@
 import React from 'react';
-import Sidenav from './Sidenav';
 import KLNZ from './../KLNZ.jpg';
 
 export default class Why extends React.Component {
   render() {
     return (
       <div className="row">
-        <main className="container">
+        <main className="col s12">
           <h3> Why? </h3>
           <p> 2018 is een jaar met mijlpalen:</p>
           <ul className="browser-default">

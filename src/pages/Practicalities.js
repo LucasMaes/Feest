@@ -1,11 +1,10 @@
 import React from 'react';
-import Sidenav from './Sidenav';
 
 export default class Practicalities extends React.Component {
   render() {
     return (
       <div className="row">
-        <main className="container">
+        <main className="col s12">
           <h3> Practicalities & fun facts </h3>
           <ul className="browser-default">
             <li> Het is niet dat we niet graag kinderen zien. Maar, aangezien de omgeving niet helemaal kinderproof is (remember dat van die vijver) raden we u toch aan een babysit te zoeken. Zo kan die zatte nonkel ook niet over uw ukkepuk struikelen. </li>
