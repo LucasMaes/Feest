@@ -9,15 +9,19 @@ export default class Music extends React.Component {
       song: '',
     };
 
-    this.handleChange = this.handleChange.bind(this);
+    this.handleChangeArtist = this.handleChangeArtist.bind(this);
+    this.handleChangeSong = this.handleChangeSong.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  handleChange(event){
+  handleChangeArtist(event){
     this.setState({artist:event.target.value});
   }
+  handleChangeSong(event){
+    this.setState({song:event.target.value});
+  }
   handleSubmit(event){
-    alert('A artist was submitted: ' + this.state.artist);
+    alert('A artist was submitted: ' + this.state.artist + ' with title song ' + this.state.song);
     event.preventDefault();
   }
 
@@ -27,16 +31,16 @@ export default class Music extends React.Component {
         <main className="col s12">
           <h3> Music Maestro </h3>
           <p> Na het dessert schudden we de beentjes los op enkele goede beats!
-          {"\n"} Lucas is op z’n best met POMPEN van Kraantej Pappie en is nooit te gegeneerd op Fifth Harmony als verzoeknummertje te vragen. Kristien smelt dan weer voor de Kempense charmes van de Van Echelpoel en gaat helemaal uit de bol op elke R&B schijf! </p>
+          {"\n"} Lucas is op z’n best met POMPEN van Kraantje Pappie en is nooit te gegeneerd op Fifth Harmony als verzoeknummertje te vragen. Kristien smelt dan weer voor de Kempense charmes van de Van Echelpoel en gaat helemaal uit de bol op elke R&B schijf! </p>
           <p> Graag horen we jullie all time favourites! </p>
           <p> Vul hieronder jullie top 3 in en we doen er alles aan (lees: zware chantage van de DJ) om deze op de playlist te krijgen… In ruil voor jullie volle overgave op de dansvloer ;) </p>
           <div className="row">
             <div className="input-field col s6">
-              <input placeholder="2Fabiola" id="artist" type="text" value={this.state.artist} onChange={this.handleChange} className="validate"/>
+              <input placeholder="2Fabiola" id="artist" type="text" value={this.state.artist} onChange={this.handleChangeArtist} className="validate"/>
               <label htmlFor="artist">Artist</label>
             </div>
             <div className="input-field col s6">
-              <input placeholder="Lift you up" id="song" type="text" value={this.state.song} className="validate"/>
+              <input placeholder="Lift you up" id="song" type="text" value={this.state.song} onChange={this.handleChangeSong} className="validate"/>
               <label htmlFor="song">Song</label>
             </div>
           </div>
