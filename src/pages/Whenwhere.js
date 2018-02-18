@@ -1,5 +1,4 @@
 import React from 'react';
-import TombeekPlage from './../tombeekplage.jpg';
 
 export default class Whenwhere extends React.Component {
   render() {

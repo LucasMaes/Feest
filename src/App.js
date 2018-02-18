@@ -32,7 +32,7 @@ class App extends Component {
               </div>
               <nav>
                 <div className="nav-wrapper teal darken-2">
-                  <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+                  <a href="#" data-activates="mobile-demo" className="button-collapse"><i className="material-icons">menu</i></a>
                   <ul id="nav-mobile" className="hide-on-med-and-down">
                     <li><Link to="/" className="white-text">Kristien & Lucas</Link></li>
                     <li><Link to="/Why" className="white-text">Why</Link></li>
@@ -42,7 +42,7 @@ class App extends Component {
                     <li><Link to="/Nighttime" className="white-text">Night Time</Link></li>
                     <li><Link to="/Gifts" className="white-text">Gifts</Link></li>
                   </ul>
-                  <ul class="side-nav" id="mobile-demo">
+                  <ul className="side-nav" id="mobile-demo">
                     <li><Link to="/">Kristien & Lucas</Link></li>
                     <li><Link to="/Why">Why</Link></li>
                     <li><Link to="/Whenwhere">When & Where</Link></li>

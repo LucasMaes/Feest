@@ -1,5 +1,4 @@
 import React from 'react';
-import Camping from './../camping.png';
 
 export default class Nighttime extends React.Component {
   render() {

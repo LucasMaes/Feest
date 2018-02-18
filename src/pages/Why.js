@@ -1,5 +1,4 @@
 import React from 'react';
-import KLNZ from './../KLNZ.jpg';
 
 export default class Why extends React.Component {
   render() {
