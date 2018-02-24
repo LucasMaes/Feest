@@ -19,7 +19,13 @@ import Banner from './banner.jpg';
 
 class App extends Component {
   componentDidMount(){
-    window.$('.button-collapse').sideNav();
+    window.$('.button-collapse').sideNav({
+        menuWidth: 250,
+        edge: 'left',
+        closeOnClick: true,
+        draggable: true
+      }
+    );
   }
   render() {
     return (
@@ -30,26 +36,24 @@ class App extends Component {
               <div className="center-align hide-on-med-and-down">
                 <img src={Banner}  alt="kristienenlucasbanner" width="100%"/>
               </div>
-              <nav>
+              <nav className="nav-center">
                 <div className="nav-wrapper teal darken-2">
                   <a href="#" data-activates="mobile-demo" className="button-collapse"><i className="material-icons">menu</i></a>
                   <ul id="nav-mobile" className="hide-on-med-and-down">
                     <li><Link to="/" className="white-text">Kristien & Lucas</Link></li>
-                    <li><Link to="/Why" className="white-text">Why</Link></li>
-                    <li><Link to="/Whenwhere" className="white-text">When & Where</Link></li>
-                    <li><Link to="/Practicalities" className="white-text"> Practicalities & fun facts </Link> </li>
+                    <li><Link to="/Why" className="white-text">Waarom feesten?</Link></li>
+                    <li><Link to="/Whenwhere" className="white-text">Waar & wanneer?</Link></li>
+                    <li><Link to="/Practicalities" className="white-text"> Tips & tricks </Link> </li>
                     <li><Link to="/Music" className="white-text">Music Maestro</Link></li>
-                    <li><Link to="/Nighttime" className="white-text">Night Time</Link></li>
-                    <li><Link to="/Gifts" className="white-text">Gifts</Link></li>
+                    <li><Link to="/Nighttime" className="white-text">Slaaptijd</Link></li>
                   </ul>
                   <ul className="side-nav" id="mobile-demo">
                     <li><Link to="/">Kristien & Lucas</Link></li>
-                    <li><Link to="/Why">Why</Link></li>
-                    <li><Link to="/Whenwhere">When & Where</Link></li>
-                    <li><Link to="/Practicalities"> Practicalities & fun facts </Link> </li>
+                    <li><Link to="/Why">Waarom feesten?</Link></li>
+                    <li><Link to="/Whenwhere">Waar & wanneer?</Link></li>
+                    <li><Link to="/Practicalities"> Tips & tricks  </Link> </li>
                     <li><Link to="/Music">Music Maestro</Link></li>
-                    <li><Link to="/Nighttime">Night Time</Link></li>
-                    <li><Link to="/Gifts">Gifts</Link></li>
+                    <li><Link to="/Nighttime">Slaaptijd</Link></li>
                   </ul>
                 </div>
               </nav>

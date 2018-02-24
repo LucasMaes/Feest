@@ -3,7 +3,13 @@ import {Link} from 'react-router-dom';
 
 export default class Sidenav extends React.Component {
   componentDidMount(){
-    window.$('.button-collapse').sideNav();
+    window.$('.button-collapse').sideNav({
+      menuWidth: 100,
+      edge: 'left',
+      closeOnClick: true,
+      draggable: true
+    }
+    );
     //$('.button-collapse').sideNav();
     //alert("hello");
   }

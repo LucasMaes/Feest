@@ -16,7 +16,7 @@ export default class Home extends React.Component {
           <main>
             <div className="section row">
               <h4 className="App-intro">
-                19 mei 2017
+                19 mei 2018
               </h4>
             </div>
           </main>

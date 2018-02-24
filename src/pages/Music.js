@@ -55,7 +55,7 @@ export default class Music extends React.Component {
     };
     // submit form data to api
     window.$.ajax({
-        url: "http://localhost/create.php",
+        url: "/create.php",
         type : "POST",
         contentType : 'application/json',
         data : JSON.stringify(form_data1),
@@ -75,7 +75,7 @@ export default class Music extends React.Component {
         }
     });
     window.$.ajax({
-        url: "http://localhost/create.php",
+        url: "/create.php",
         type : "POST",
         contentType : 'application/json',
         data : JSON.stringify(form_data2),
@@ -95,7 +95,7 @@ export default class Music extends React.Component {
         }
     });
     window.$.ajax({
-        url: "http://localhost/create.php",
+        url: "/create.php",
         type : "POST",
         contentType : 'application/json',
         data : JSON.stringify(form_data3),
@@ -124,7 +124,7 @@ export default class Music extends React.Component {
         <main className="col s12">
           <h3> Music Maestro </h3>
           <p> Na het dessert schudden we de beentjes los op enkele goede beats!
-          {"\n"} Lucas is op z’n best met POMPEN van Kraantje Pappie en is nooit te gegeneerd op Fifth Harmony als verzoeknummertje te vragen. Kristien smelt dan weer voor de Kempense charmes van de Van Echelpoel en gaat helemaal uit de bol op elke R&B schijf! </p>
+          {"\n"} Lucas is op z’n best met POMPEN van Kraantje Pappie en is nooit te gegeneerd om Fifth Harmony als verzoeknummertje te vragen. Kristien smelt dan weer voor de Kempense charmes van de Van Echelpoel en gaat helemaal uit de bol op elke R&B schijf! </p>
           <p> Graag horen we jullie all time favourites! </p>
           <p> Vul hieronder jullie top 3 in en we doen er alles aan (lees: zware chantage van de DJ) om deze op de playlist te krijgen… In ruil voor jullie volle overgave op de dansvloer ;) </p>
           <div className="row">
