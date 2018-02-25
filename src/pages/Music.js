@@ -55,7 +55,7 @@ export default class Music extends React.Component {
     };
     // submit form data to api
     window.$.ajax({
-        url: "http://localhost/createartist.php",
+        url: "http://localhost/Feest-backend/createartist.php",
         type : "POST",
         contentType : 'application/json',
         data : JSON.stringify(form_data1),
@@ -75,7 +75,7 @@ export default class Music extends React.Component {
         }
     });
     window.$.ajax({
-        url: "http://localhost/createartist.php",
+        url: "http://localhost/Feest-backend/createartist.php",
         type : "POST",
         contentType : 'application/json',
         data : JSON.stringify(form_data2),
@@ -95,7 +95,7 @@ export default class Music extends React.Component {
         }
     });
     window.$.ajax({
-        url: "http://localhost/createartist.php",
+        url: "http://localhost/Feest-backend/createartist.php",
         type : "POST",
         contentType : 'application/json',
         data : JSON.stringify(form_data3),
@@ -114,7 +114,7 @@ export default class Music extends React.Component {
             console.log(xhr, resp, text);
         }
     });
-
+    window.Materialize.toast('Bedankt om je liedjes door te geven!', 3000)
     event.preventDefault();
 }
 

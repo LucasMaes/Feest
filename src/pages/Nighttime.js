@@ -25,7 +25,7 @@ export default class Nighttime extends React.Component {
     };
     // submit form data to api
     window.$.ajax({
-        url: "http://localhost/createtent.php",
+        url: "http://localhost/Feest-backend/createtent.php",
         type : "POST",
         contentType : 'application/json',
         data : JSON.stringify(form_data),
