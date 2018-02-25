@@ -50,3 +50,10 @@ nav.nav-center ul li {
 nav.nav-center ul li a {
     display: inline-block;
 }
+
+#toast-container {
+  top: auto !important;
+  right: auto !important;
+  bottom: 50%;
+  left:7%;
+}

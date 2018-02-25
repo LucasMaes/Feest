@@ -55,7 +55,7 @@ export default class Music extends React.Component {
     };
     // submit form data to api
     window.$.ajax({
-        url: "/create.php",
+        url: "http://localhost/createartist.php",
         type : "POST",
         contentType : 'application/json',
         data : JSON.stringify(form_data1),
@@ -75,7 +75,7 @@ export default class Music extends React.Component {
         }
     });
     window.$.ajax({
-        url: "/create.php",
+        url: "http://localhost/createartist.php",
         type : "POST",
         contentType : 'application/json',
         data : JSON.stringify(form_data2),
@@ -95,7 +95,7 @@ export default class Music extends React.Component {
         }
     });
     window.$.ajax({
-        url: "/create.php",
+        url: "http://localhost/createartist.php",
         type : "POST",
         contentType : 'application/json',
         data : JSON.stringify(form_data3),
