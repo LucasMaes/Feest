@@ -41,72 +41,27 @@ export default class Music extends React.Component {
   }
   handleSubmit(event){
     // data in the form
-    var form_data1={
-        artist: this.state.artist1,
-        song: this.state.song1
-    };
-    var form_data2={
-        artist: this.state.artist2,
-        song: this.state.song2
-    };
-    var form_data3={
-        artist: this.state.artist3,
-        song: this.state.song3
-    };
+    var form_data=[
+      {artist: this.state.artist1, song: this.state.song1},
+      {artist: this.state.artist2, song: this.state.song2},
+      {artist: this.state.artist3, song: this.state.song3},];
+
     // submit form data to api
     window.$.ajax({
-        url: "http://localhost/Feest-backend/createartist.php",
+        url: "http://localhost/Feest-backend/bulkcreate.php",
         type : "POST",
         contentType : 'application/json',
-        data : JSON.stringify(form_data1),
+        data : JSON.stringify(form_data),
         success : function(response) {
 
             // api message
             this.setState({successCreation: response['message']});
 
             // empty form
-            this.setState({artist1: ""});
-            this.setState({song1: ""});
-
-        }.bind(this),
-        error: function(xhr, resp, text){
-            // show error to console
-            console.log(xhr, resp, text);
-        }
-    });
-    window.$.ajax({
-        url: "http://localhost/Feest-backend/createartist.php",
-        type : "POST",
-        contentType : 'application/json',
-        data : JSON.stringify(form_data2),
-        success : function(response) {
-
-            // api message
-            this.setState({successCreation: response['message']});
-
-            // empty form
-            this.setState({artist2: ""});
-            this.setState({song2: ""});
-
-        }.bind(this),
-        error: function(xhr, resp, text){
-            // show error to console
-            console.log(xhr, resp, text);
-        }
-    });
-    window.$.ajax({
-        url: "http://localhost/Feest-backend/createartist.php",
-        type : "POST",
-        contentType : 'application/json',
-        data : JSON.stringify(form_data3),
-        success : function(response) {
-
-            // api message
-            this.setState({successCreation: response['message']});
-
-            // empty form
-            this.setState({artist3: ""});
-            this.setState({song3: ""});
+            for (var i = 0; i < 3; i++) {
+              this.setState({artist: ""});
+              this.setState({song: ""});
+            }
 
         }.bind(this),
         error: function(xhr, resp, text){
