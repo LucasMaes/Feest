@@ -21,7 +21,7 @@ export default class Nighttime extends React.Component {
   handleSubmit(event){
     // data in the form
     var form_data={
-        user: this.state.person
+        person: this.state.person
     };
     // submit form data to api
     window.$.ajax({
