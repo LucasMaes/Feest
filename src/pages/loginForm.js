@@ -18,11 +18,12 @@ export default class LoginForm extends React.Component {
   }
   submit() {
     this.setState({enabled: false, errorMessage: null}); // Disable the form and clear the error message
-    if ( this.state.password == sha256('sha256').update(this.state.userName + "kl").digest('hex')){
+    if ( this.state.password === sha256('sha256').update(this.state.userName + "kl").digest('hex')){
       this.props.login();
+      this.props.username(this.state.userName);
     }
     else{
-      this.setState({enabled: true, errorMessage: "An error occurred"});
+      this.setState({enabled: true, errorMessage: "The user name and password do not match."});
     }
   }
   render() {

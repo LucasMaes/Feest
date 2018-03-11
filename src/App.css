@@ -40,14 +40,14 @@ header, main, footer {
   }
 }
 
-nav.nav-center ul {
+nav.nav-center ul{
     text-align: center;
 }
-nav.nav-center ul li {
+nav.nav-center ul li{
     display: inline;
     float: none;
 }
-nav.nav-center ul li a {
+nav.nav-center ul li a{
     display: inline-block;
 }
 
