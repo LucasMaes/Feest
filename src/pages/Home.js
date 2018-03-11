@@ -2,6 +2,9 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 
 export default class Home extends React.Component {
+  constructor(props) {
+    super(props);
+  }
   render() {
     return (
       <div>
@@ -9,6 +12,7 @@ export default class Home extends React.Component {
           <div className="center-align">
             <header className="App-header">
               <h1 className="App-title">Kristien en Lucas</h1>
+              <h5 className="right-align"> Welcome {this.props.loggedInUser} </h5>
             </header>
           </div>
         </div>

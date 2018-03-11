@@ -23,9 +23,11 @@ class App extends Component {
     super(props);
     // Set initial state
     this.state = {
-      login: false
+      login: false,
+      username: ""
     };
     this.handleLogin = this.handleLogin.bind(this);
+    this.handleUserName = this.handleUserName.bind(this);
   }
 
   componentDidMount(){
@@ -51,6 +53,11 @@ class App extends Component {
   handleLogin(event){
     this.setState({login:true});
   }
+
+  handleUserName = (uname) => {
+    this.setState({username: uname});
+  }
+
 
   render() {
     if (this.state.login){
@@ -83,7 +90,7 @@ class App extends Component {
                     </ul>
                   </div>
                 </nav>
-                <Route exact path="/" component={Home}/>
+                <Route exact path="/" component={withProps(Home, { loggedInUser: this.state.username })}/>
                 <Route path="/why" component={Why}/>
                 <Route path="/whenwhere" component={Whenwhere}/>
                 <Route path="/practicalities" component={Practicalities}/>
@@ -97,9 +104,15 @@ class App extends Component {
       );
     }
     else {
-      return <div className="section"><LoginForm login = {this.handleLogin}/></div>;
+      return <div className="section"><LoginForm login = {this.handleLogin} username = {this.handleUserName}/></div>;
     }
   }
 }
+function withProps(Component, props) {
+  return function(matchProps) {
+    return <Component {...props} {...matchProps} />
+  }
+}
+
 
 export default App;
