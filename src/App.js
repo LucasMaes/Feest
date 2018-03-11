@@ -15,6 +15,7 @@ import Nighttime from './pages/Nighttime';
 import Gifts from './pages/Gifts';
 import Sidenav from './pages/Sidenav';
 import Banner from './banner.jpg';
+import BannerMS from './IMG_1272.JPG';
 import LoginForm from './pages/loginForm';
 
 
@@ -66,7 +67,7 @@ class App extends Component {
           <div className="App">
             <Router>
               <div className="container">
-                <div className="center-align hide-on-med-and-down">
+                <div className="center-align">
                   <img src={Banner}  alt="kristienenlucasbanner" width="100%"/>
                 </div>
                 <nav className="nav-center">

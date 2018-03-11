@@ -21,6 +21,15 @@ export default class LoginForm extends React.Component {
     if ( this.state.password === sha256('sha256').update(this.state.userName + "kl").digest('hex')){
       this.props.login();
       this.props.username(this.state.userName);
+      var form_data={
+          person: this.state.userName
+      };
+      window.$.ajax({
+          url: "http://localhost/Feest-backend/createuserlogin.php",
+          type : "POST",
+          contentType : 'application/json',
+          data : JSON.stringify(form_data)
+      });
     }
     else{
       this.setState({enabled: true, errorMessage: "The user name and password do not match."});
