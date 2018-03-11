@@ -38,6 +38,16 @@ class App extends Component {
     );
   }
 
+  componentDidUpdate(){
+    window.$('.button-collapse').sideNav({
+        menuWidth: 250,
+        edge: 'left',
+        closeOnClick: true,
+        draggable: true
+      }
+    );
+  }
+
   handleLogin(event){
     this.setState({login:true});
   }
